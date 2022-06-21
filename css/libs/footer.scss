@@ -1,0 +1,19 @@
+footer {
+    height: 185px;
+    padding: 20px;
+    background: #323031;
+    .footer__link {
+        display: flex;
+        flex-direction: column;
+        margin: 14px 0;
+        }
+    .footer__icon {
+        i {
+            font-size: 12px;
+            color: white;
+            }
+        }
+        a {
+            color: white;
+        }
+    }

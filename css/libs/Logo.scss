@@ -1,0 +1,11 @@
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px ;
+    box-shadow: $box-shadow;
+
+    img {
+        height: 24px;
+    }
+}
