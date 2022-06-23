@@ -2,11 +2,7 @@ $box-shadow: 0 0 10px -5px #000;
 $effet-shadow: 0 0 10px -2px #000;
 $padding: 20px;
 
-@import 'libs/reset.scss';
-@import 'libs/Logo.scss';
-@import 'libs/btn__btn.scss';
-@import 'libs/article.scss';
-@import 'libs/footer.scss';
+@import 'libs/_reset.scss', 'libs/_Logo.scss','libs/_btn__btn.scss','libs/_article.scss','libs/_footer.scss';
 
 @media screen and (max-width: 480px) {
 
