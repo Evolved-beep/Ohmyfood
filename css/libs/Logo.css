@@ -1,0 +1,27 @@
+.Logo {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+.Logo i {
+  margin: 0 12px;
+}
+
+.Logo img {
+  height: 24px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=Logo.css.map */

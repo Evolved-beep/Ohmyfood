@@ -1,11 +1,22 @@
 .Logo {
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px ;
-    box-shadow: $box-shadow;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    i {
+        margin: 0 12px;
+    }
 
     img {
         height: 24px;
+        margin: 0 auto;
     }
-}
+} 
+
+    
