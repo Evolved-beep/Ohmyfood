@@ -173,6 +173,13 @@ table {
             box-shadow: 0 0 10px -5px #000;
     border-radius: 15px;
   }
+  #menu .menu__container article:hover .menu__ingredient, #menu .menu__container article:hover h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    resize: horizontal;
+    width: 230px;
+  }
   #menu .menu__container article:hover .success__order {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -213,6 +220,7 @@ table {
   #menu .menu__container article .blabla {
     width: 100%;
     padding: 10px;
+    white-space: nowrap;
   }
   #menu .menu__container article .blabla h2 {
     font-size: 22px;
@@ -227,16 +235,9 @@ table {
             justify-content: space-between;
     font-size: 18px;
   }
-  #menu .menu__container article .blabla .menu__description .menu__ingredient {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    resize: horizontal;
-    width: 100%;
-  }
   #menu .menu__container article .blabla .menu__description .menu__prix {
     font-weight: 600;
-    margin: 0 12px;
+    margin: 0 10px;
   }
   #menu .menu__container article .success__order {
     display: none;

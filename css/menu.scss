@@ -89,6 +89,13 @@
                 border-radius: 15px;
 
                 &:hover {
+                    .menu__ingredient, h2{
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        resize: horizontal;
+                        width: 230px;
+                    } 
                     .success__order {
                         display: flex;
                         justify-content: center;
@@ -118,6 +125,7 @@
                 .blabla {
                     width: 100%;
                     padding: 10px;
+                    white-space: nowrap;
 
                     h2 {
                         font-size: 22px;
@@ -129,16 +137,9 @@
                         justify-content: space-between;
                         font-size: 18px;
 
-                    .menu__ingredient {
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        resize: horizontal;
-                        width: 100%;
-                    } 
                         .menu__prix {
                             font-weight: 600;
-                            margin: 0 12px;
+                            margin: 0 10px;
                         } 
         
                     }
