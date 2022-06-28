@@ -1,0 +1,111 @@
+.menu__container {
+    margin: 12px 0;
+
+    span {
+        display: inline-block;
+        padding: 0 0 6px 0;
+        width: 12%;
+        border-bottom: 3px solid #99E2D0;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 26px 0 0 0;
+    }
+
+    .AnimE {
+        animation: menu__anim 400ms ease-in;
+    }
+
+    .AnimP {
+        animation: menu__anim 600ms ease-in;
+    }
+
+    .AnimD {
+        animation: menu__anim 800ms ease-in;
+    }
+
+    article {
+        position: relative;
+        display: flex;
+        margin: 14px 0;
+        height: 70px;
+        max-width: 480px;
+        box-shadow: 0 0 10px -5px #000;
+        border-radius: 15px;
+
+        &:hover {
+            .menu__ingredient, h2{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 230px;
+            } 
+            .success__order {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+                width: 80px;
+                animation: SlideIn 800ms ease-in-out;
+                border-radius: 0 15px 15px 0;
+                background-color: #99E2D0;
+
+                .check__icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    background-color: white;
+                    animation: IconRotation 800ms ease-in;
+
+                   .check__order{
+                    color: #99E2D0;
+                   }
+                }
+            }
+        } 
+        .blabla {
+            width: 100%;
+            padding: 10px;
+            white-space: nowrap;
+
+            h2 {
+                font-size: 20px;
+                margin: 0 0 10px 0;
+            }
+       
+            .menu__description {
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+
+                .menu__prix {
+                    font-weight: 800;
+                    margin: 0 10px;
+                } 
+
+            }
+        }
+        .success__order {
+            display: none;
+        }
+    } 
+    .btn__btn__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn__btn {
+            width: 120px;
+            font-size: 18px;
+        } 
+        &:hover {
+            .btn__btn {
+               box-shadow: 0 0 10px 0 #000;
+            }
+        }
+
+    }
+} 
+

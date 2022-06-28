@@ -1,5 +1,5 @@
 $btn-color: linear-gradient(359deg, #9356DC, #FF79DA);
-$effet-shadow: 0 0 10px -2px #000;
+$effet-shadow: 0 0 10px 0 #000;
 
 
 .btn__btn {
@@ -11,7 +11,7 @@ $effet-shadow: 0 0 10px -2px #000;
 
     &:hover {
         box-shadow: $effet-shadow;
-        background: Darken($btn-color,100);
+        opacity: 0.9;
         
     }
 }  
