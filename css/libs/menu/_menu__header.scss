@@ -1,9 +1,20 @@
+@import '../breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
+
+@mixin desktop-responsive {
+    @media screen and (min-width:map-get($breakpoint,desktop)) {
+        @content;
+    }
+}
 .background_img {
     position: relative;
-    max-width: 480px;
     width: 100%;
-    z-index: -1;    
-
+    z-index: -1; 
+    
     img {
         height: 100%;
         width: 100%;
@@ -12,48 +23,70 @@
 #menu {
     display: flex;
     flex-direction: column;
-    max-width: 480px;
     background: #f3f3f3;
     padding: 20px;
     margin-top: -70px;
     z-index: 2;
     overflow: visible;
     border-radius: 25px 25px 0 0;
+
+
+    @include tablette-responsive {
+        margin-top: -150px;
+        padding: 40px;
+    }
     
     .menu__titre {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 24px;
+
+        @include tablette-responsive {
+            font-size: 40px;
+        }
     }
 
     h1 {
         font-family:'Shrikhand';
         font-size: 26px;
+
+        @include tablette-responsive {
+            font-size: 40px;
+        }
     }
 
-    i {
+    .animation__icon {
+    .coeur_anim {
         position: relative;
     }
 
-    svg {
+    .svg__anim {
         position: absolute;
         right: 20px;
         height: 24px;
         fill: transparent;
+
+        @include tablette-responsive{
+            height: 40px;
+            right: 40px;
+       
+     }
     }
 
     &:hover {
         .coeur_anim{
             opacity: 0;
-            transition-duration: 800ms;
             
         }
 
-        svg {
-            animation-name: HeartAnim;
-            animation-duration: 800ms;
+        .svg__anim {
+            animation: HeartAnim 800ms ease-in-out;
             fill: #9356DC ;
+
         }
     }
+}
+
+    
 }

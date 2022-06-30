@@ -1,3 +1,11 @@
+@import '../breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
+
+
 .localisation {
     display: flex;
     justify-content: center;
@@ -6,7 +14,14 @@
     background: #eaeaea;
     font-size: 15px;
 
+    @include tablette-responsive {
+        height: 50px;
+        font-size: 20px;
+    }
+
     p {
         padding: 0 20px 0 15px;
+
     }
+
 }

@@ -1,4 +1,11 @@
 @import '../btn__btn.scss';
+@import '../breakpoint';
+
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
 
 #decouverte {
     display: flex;
@@ -6,19 +13,30 @@
     align-items: center;
     flex-direction: column;
     height: 220px;
-    max-width: 480px;
     width: 100%;
     background: #f2f2f2;
+
+    @include tablette-responsive {
+        height: 280px;
+    }
 
     h1 {
         font-size: 20px;
         text-align: center;
         width: 52%;
+
+        @include tablette-responsive {
+            font-size: 22px;
+        }
     }
 
     p {
         font-size: 18px;
         text-align: center;
         width: 75%;
+
+        @include tablette-responsive {
+            font-size: 20px;
+        }
     }
 }

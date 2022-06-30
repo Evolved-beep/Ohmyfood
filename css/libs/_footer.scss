@@ -1,12 +1,29 @@
+@import './breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
 
 footer {
     height: 185px;
     padding: 20px;
     background: #323031;
+
+    @include tablette-responsive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     p {
         font-family: 'Shrikhand';
         color: white;
         font-size: 20px;
+
+        @include tablette-responsive {
+            font-size: 32px;
+        }
     }
     .footer__link {
         display: flex;
@@ -14,6 +31,10 @@ footer {
         margin: 14px 0;
         color: white;
         font-size: 20px;
+
+        @include tablette-responsive {
+            font-size: 24px;
+        }
     }
     a {
         text-decoration: none;
@@ -22,10 +43,19 @@ footer {
     
     .footer__icon {
         font-size: 20px;
+
+        @include tablette-responsive {
+            font-size: 24px;
+        }
         i {
             font-size: 12px;
             color: white;
+
+            @include tablette-responsive {
+                font-size: 20px;
+            }
         }
+
     }
        
 }

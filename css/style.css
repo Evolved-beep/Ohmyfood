@@ -50,6 +50,48 @@ p {
   font-weight: 100;
 }
 
+body {
+  height: 100vh;
+}
+
+.loader__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.loader {
+  height: 50px;
+  width: 50px;
+  border: 3px solid rgba(153, 226, 208, 0.4);
+  border-radius: 50px;
+  position: relative;
+  margin: 0 10px;
+}
+
+.loader::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  border-top-color: #99E2D0;
+  -webkit-animation: Spin 1s linear 0s infinite;
+          animation: Spin 1s linear 0s infinite;
+}
+
 .Logo {
   height: 50px;
   display: -webkit-box;
@@ -63,6 +105,12 @@ p {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .Logo {
+    height: 70px;
+  }
+}
+
 .Logo a {
   text-decoration: none;
   color: #000;
@@ -72,9 +120,22 @@ p {
   margin: 0 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .Logo i {
+    font-size: 24px;
+    margin: 0 18px;
+  }
+}
+
 .Logo img {
   height: 24px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .Logo img {
+    height: 35px;
+  }
 }
 
 .localisation {
@@ -92,6 +153,13 @@ p {
   font-size: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .localisation {
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
 .localisation p {
   padding: 0 20px 0 15px;
 }
@@ -102,6 +170,12 @@ p {
   background: linear-gradient(359deg, #9356DC, #FF79DA);
   padding: 12px;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .btn__btn {
+    font-size: 18px;
+  }
 }
 
 .btn__btn:hover {
@@ -125,9 +199,14 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 220px;
-  max-width: 480px;
   width: 100%;
   background: #f2f2f2;
+}
+
+@media screen and (min-width: 768px) {
+  #decouverte {
+    height: 280px;
+  }
 }
 
 #decouverte h1 {
@@ -136,10 +215,22 @@ p {
   width: 52%;
 }
 
+@media screen and (min-width: 768px) {
+  #decouverte h1 {
+    font-size: 22px;
+  }
+}
+
 #decouverte p {
   font-size: 18px;
   text-align: center;
   width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  #decouverte p {
+    font-size: 20px;
+  }
 }
 
 #fonctionnement {
@@ -165,6 +256,12 @@ p {
       align-self: flex-start;
 }
 
+@media screen and (min-width: 768px) {
+  #fonctionnement h1 {
+    font-size: 22px;
+  }
+}
+
 #fonctionnement .fonctionnement__card {
   position: relative;
   display: -webkit-box;
@@ -177,13 +274,19 @@ p {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
-  max-width: 480px;
   width: 100%;
   margin: 20px 0 0 0;
   background: #f2f2f2;
   border-radius: 25px;
   -webkit-box-shadow: 0 0 10px -5px #000;
           box-shadow: 0 0 10px -5px #000;
+}
+
+@media screen and (min-width: 768px) {
+  #fonctionnement .fonctionnement__card {
+    max-width: 768px;
+    width: 85%;
+  }
 }
 
 #fonctionnement .fonctionnement__card:hover {
@@ -209,13 +312,33 @@ p {
   background-color: #9356DC;
 }
 
+@media screen and (min-width: 768px) {
+  #fonctionnement .fonctionnement__card div {
+    height: 30px;
+    width: 30px;
+    font-size: 17px;
+  }
+}
+
 #fonctionnement .fonctionnement__card i {
   font-size: 14px;
   margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  #fonctionnement .fonctionnement__card i {
+    font-size: 18px;
+  }
+}
+
 #fonctionnement .fonctionnement__card h2 {
   font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  #fonctionnement .fonctionnement__card h2 {
+    font-size: 20px;
+  }
 }
 
 #restaurant {
@@ -223,17 +346,38 @@ p {
   background: #f2f2f2;
 }
 
-h1 {
+#restaurant h1 {
   font-size: 20px;
 }
 
-.restaurant__link {
+@media screen and (min-width: 768px) {
+  #restaurant h1 {
+    font-size: 22px;
+  }
+}
+
+#restaurant .restaurant__link {
   position: relative;
   text-decoration: none;
   color: #000;
 }
 
-.restaurant__link article {
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 12px 0;
+  }
+}
+
+#restaurant .restaurant__link article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +393,22 @@ h1 {
   border-radius: 15px;
 }
 
-.restaurant__link article img {
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__link article {
+    position: relative;
+    height: 280px;
+    max-width: 768px;
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  #restaurant .restaurant__link article {
+    width: 40%;
+  }
+}
+
+#restaurant .restaurant__link article img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 180px;
@@ -257,7 +416,13 @@ h1 {
   border-radius: 15px 15px 0 0;
 }
 
-.restaurant__nouveau {
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__link article img {
+    height: 200px;
+  }
+}
+
+#restaurant .restaurant__nouveau {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -266,29 +431,42 @@ h1 {
   background: #99E2D0;
 }
 
-.restaurant__nouveau p {
+#restaurant .restaurant__nouveau p {
   color: #32CD32;
   text-align: center;
 }
 
-.restaurant__container {
+#restaurant .restaurant__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.restaurant__container .restaurant__description {
+#restaurant .restaurant__container .restaurant__description {
   position: relative;
   padding: 12px 10px;
   width: 80%;
 }
 
-.restaurant__container .restaurant__description h2 {
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__container .restaurant__description {
+    font-size: 22px;
+  }
+}
+
+#restaurant .restaurant__container .restaurant__description h2 {
   font-size: 16px;
   margin-bottom: 4px;
 }
 
-.restaurant__container .anim__icon {
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__container .restaurant__description h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+}
+
+#restaurant .restaurant__container .anim__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,9 +479,34 @@ h1 {
   width: 20%;
 }
 
+@media screen and (min-width: 768px) {
+  #restaurant .restaurant__container .anim__icon {
+    font-size: 22px;
+  }
+}
+
+#restaurant .restaurant__container .anim__icon i {
+  position: relative;
+}
+
+#restaurant .restaurant__container .anim__icon:hover i {
+  opacity: 0;
+}
+
+#restaurant .restaurant__container .anim__icon:hover .svg__anim {
+  -webkit-animation: HeartAnim 800ms ease-in;
+          animation: HeartAnim 800ms ease-in;
+  fill: #9356DC;
+}
+
+#restaurant .restaurant__container .anim__icon .svg__anim {
+  position: absolute;
+  height: 20px;
+  fill: transparent;
+}
+
 .background_img {
   position: relative;
-  max-width: 480px;
   width: 100%;
   z-index: -1;
 }
@@ -321,13 +524,19 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 480px;
   background: #f3f3f3;
   padding: 20px;
   margin-top: -70px;
   z-index: 2;
   overflow: visible;
   border-radius: 25px 25px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  #menu {
+    margin-top: -150px;
+    padding: 40px;
+  }
 }
 
 #menu .menu__titre {
@@ -343,33 +552,48 @@ h1 {
   font-size: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  #menu .menu__titre {
+    font-size: 40px;
+  }
+}
+
 #menu h1 {
   font-family: 'Shrikhand';
   font-size: 26px;
 }
 
-#menu i {
+@media screen and (min-width: 768px) {
+  #menu h1 {
+    font-size: 40px;
+  }
+}
+
+#menu .animation__icon .coeur_anim {
   position: relative;
 }
 
-#menu svg {
+#menu .animation__icon .svg__anim {
   position: absolute;
   right: 20px;
   height: 24px;
   fill: transparent;
 }
 
-#menu:hover .coeur_anim {
-  opacity: 0;
-  -webkit-transition-duration: 800ms;
-          transition-duration: 800ms;
+@media screen and (min-width: 768px) {
+  #menu .animation__icon .svg__anim {
+    height: 40px;
+    right: 40px;
+  }
 }
 
-#menu:hover svg {
-  -webkit-animation-name: HeartAnim;
-          animation-name: HeartAnim;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
+#menu .animation__icon:hover .coeur_anim {
+  opacity: 0;
+}
+
+#menu .animation__icon:hover .svg__anim {
+  -webkit-animation: HeartAnim 800ms ease-in-out;
+          animation: HeartAnim 800ms ease-in-out;
   fill: #9356DC;
 }
 
@@ -385,6 +609,13 @@ h1 {
   font-size: 18px;
   text-transform: uppercase;
   margin: 26px 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__container span {
+    font-size: 24px;
+    width: 8%;
+  }
 }
 
 .menu__container .AnimE {
@@ -409,10 +640,15 @@ h1 {
   display: flex;
   margin: 14px 0;
   height: 70px;
-  max-width: 480px;
   -webkit-box-shadow: 0 0 10px -5px #000;
           box-shadow: 0 0 10px -5px #000;
   border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__container article {
+    height: 90px;
+  }
 }
 
 .menu__container article:hover .menu__ingredient, .menu__container article:hover h2 {
@@ -420,6 +656,12 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   width: 230px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__container article:hover .menu__ingredient, .menu__container article:hover h2 {
+    width: 400px;
+  }
 }
 
 .menu__container article:hover .success__order {
@@ -440,7 +682,14 @@ h1 {
   background-color: #99E2D0;
 }
 
-.menu__container article:hover .success__order .check__icon {
+@media screen and (min-width: 768px) {
+  .menu__container article:hover .success__order {
+    height: 90px;
+    width: 150px;
+  }
+}
+
+.menu__container article:hover .check__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,22 +707,34 @@ h1 {
           animation: IconRotation 800ms ease-in;
 }
 
-.menu__container article:hover .success__order .check__icon .check__order {
+.menu__container article:hover .check__icon .check__order {
   color: #99E2D0;
 }
 
-.menu__container article .blabla {
+.menu__container .blabla {
   width: 100%;
   padding: 10px;
   white-space: nowrap;
 }
 
-.menu__container article .blabla h2 {
+@media screen and (min-width: 768px) {
+  .menu__container .blabla {
+    padding: 16px;
+  }
+}
+
+.menu__container .blabla h2 {
   font-size: 20px;
   margin: 0 0 10px 0;
 }
 
-.menu__container article .blabla .menu__description {
+@media screen and (min-width: 768px) {
+  .menu__container .blabla h2 {
+    font-size: 24px;
+  }
+}
+
+.menu__container .blabla .menu__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,16 +744,22 @@ h1 {
   font-size: 16px;
 }
 
-.menu__container article .blabla .menu__description .menu__prix {
+@media screen and (min-width: 768px) {
+  .menu__container .blabla .menu__description {
+    font-size: 22px;
+  }
+}
+
+.menu__container .blabla .menu__description .menu__prix {
   font-weight: 800;
   margin: 0 10px;
 }
 
-.menu__container article .success__order {
+.menu__container .success__order {
   display: none;
 }
 
-.menu__container .btn__btn__container {
+.btn__btn__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,12 +771,18 @@ h1 {
           align-items: center;
 }
 
-.menu__container .btn__btn__container .btn__btn {
-  width: 120px;
+.btn__btn__container .btn__btn {
+  padding: 14px;
   font-size: 18px;
 }
 
-.menu__container .btn__btn__container:hover .btn__btn {
+@media screen and (min-width: 768px) {
+  .btn__btn__container .btn__btn {
+    font-size: 22px;
+  }
+}
+
+.btn__btn__container:hover .btn__btn {
   -webkit-box-shadow: 0 0 10px 0 #000;
           box-shadow: 0 0 10px 0 #000;
 }
@@ -624,16 +897,62 @@ h1 {
   }
 }
 
+@-webkit-keyframes Spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes Spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 footer {
   height: 185px;
   padding: 20px;
   background: #323031;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer p {
   font-family: 'Shrikhand';
   color: white;
   font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  footer p {
+    font-size: 32px;
+  }
 }
 
 footer .footer__link {
@@ -649,6 +968,12 @@ footer .footer__link {
   font-size: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  footer .footer__link {
+    font-size: 24px;
+  }
+}
+
 footer a {
   text-decoration: none;
   color: white;
@@ -658,8 +983,20 @@ footer .footer__icon {
   font-size: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  footer .footer__icon {
+    font-size: 24px;
+  }
+}
+
 footer .footer__icon i {
   font-size: 12px;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer__icon i {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

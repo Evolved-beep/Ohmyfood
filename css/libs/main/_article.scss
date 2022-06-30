@@ -1,15 +1,43 @@
+@import "../breakpoint";
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+        
+    }
+}
+
+@mixin desktop-responsive {
+    @media screen and (min-width:map-get($breakpoint,desktop)) {
+        @content;
+    }
+}
+
+
 #restaurant {
     padding: 20px;
     background: #f2f2f2;
-}
+
+
 h1 {
     font-size: 20px;
+
+    @include tablette-responsive {
+        font-size: 22px;
+    }
   }
+
 
 .restaurant__link {
     position: relative;
     text-decoration: none;
     color: #000;
+
+    @include tablette-responsive{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 12px 0;
+    }
 
     article {
         display: flex;
@@ -20,11 +48,26 @@ h1 {
         box-shadow: 0 0 10px -5px #000;
         border-radius: 15px;
 
+        @include tablette-responsive {
+            position: relative;
+            height: 280px;
+            max-width: 768px;
+            width: 65%;
+        }
+
+        @include desktop-responsive {
+            width: 40%;
+        }
+
     img {
             object-fit: cover;
             height: 180px;
             width: 100%;
             border-radius: 15px 15px 0 0;
+
+            @include tablette-responsive {
+                height: 200px;
+            }
         }
 }
 }  
@@ -51,9 +94,18 @@ h1 {
         padding: 12px 10px;
         width: 80%;
 
+        @include tablette-responsive {
+            font-size: 22px;
+        }
+
         h2 {
         font-size: 16px;
         margin-bottom: 4px;
+
+        @include tablette-responsive {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
         }
 
     }
@@ -63,5 +115,31 @@ h1 {
         justify-content: center;
         align-items: center;
         width: 20%;
+
+        @include tablette-responsive {
+            font-size: 22px;
+        }
+        
+        i {
+            position: relative;
+
+        }
+        &:hover {
+            i {
+                opacity: 0;
+            }
+
+            .svg__anim {
+                animation: HeartAnim 800ms ease-in;
+                fill: #9356DC;
+            }
+        }
+
+        .svg__anim {
+            position: absolute;
+            height: 20px;
+            fill: transparent;
+        }
     } 
+}
 }

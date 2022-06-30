@@ -1,3 +1,10 @@
+@import '../breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
+
 .menu__container {
     margin: 12px 0;
 
@@ -9,6 +16,11 @@
         font-size: 18px;
         text-transform: uppercase;
         margin: 26px 0 0 0;
+
+        @include tablette-responsive {
+            font-size: 24px;
+            width: 8%;
+        }
     }
 
     .AnimE {
@@ -28,9 +40,12 @@
         display: flex;
         margin: 14px 0;
         height: 70px;
-        max-width: 480px;
         box-shadow: 0 0 10px -5px #000;
         border-radius: 15px;
+
+        @include tablette-responsive {
+            height: 90px;
+        }
 
         &:hover {
             .menu__ingredient, h2{
@@ -38,6 +53,10 @@
                 overflow: hidden;
                 white-space: nowrap;
                 width: 230px;
+
+                @include tablette-responsive {
+                    width: 400px;
+                }
             } 
             .success__order {
                 display: flex;
@@ -49,6 +68,11 @@
                 border-radius: 0 15px 15px 0;
                 background-color: #99E2D0;
 
+                @include tablette-responsive {
+                    height: 90px;
+                    width: 150px;
+                }
+            }
                 .check__icon {
                     display: flex;
                     justify-content: center;
@@ -70,15 +94,27 @@
             padding: 10px;
             white-space: nowrap;
 
+            @include tablette-responsive {
+                padding: 16px;
+            }
+
             h2 {
                 font-size: 20px;
                 margin: 0 0 10px 0;
+
+                @include tablette-responsive {
+                    font-size: 24px;
+                }
             }
        
             .menu__description {
                 display: flex;
                 justify-content: space-between;
                 font-size: 16px;
+
+                @include tablette-responsive {
+                    font-size: 22px;
+                }
 
                 .menu__prix {
                     font-weight: 800;
@@ -97,8 +133,12 @@
         align-items: center;
 
         .btn__btn {
-            width: 120px;
+            padding: 14px;
             font-size: 18px;
+
+            @include tablette-responsive {
+                font-size: 22px;
+            }
         } 
         &:hover {
             .btn__btn {
@@ -107,5 +147,5 @@
         }
 
     }
-} 
+
 

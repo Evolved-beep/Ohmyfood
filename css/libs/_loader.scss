@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+}
+
+.loader__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.loader {
+    height: 50px;
+    width: 50px;
+    border: 3px solid rgba($color: #99E2D0, $alpha: 0.4);
+    border-radius: 50px;
+    position: relative;
+    margin: 0 10px;
+    
+}
+
+.loader::after {
+    content:'';
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    border-top-color: #99E2D0;
+    animation: Spin 1s linear 0s infinite;
+}

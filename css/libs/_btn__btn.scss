@@ -1,3 +1,11 @@
+@import './breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
+
+
 $btn-color: linear-gradient(359deg, #9356DC, #FF79DA);
 $effet-shadow: 0 0 10px 0 #000;
 
@@ -8,6 +16,10 @@ $effet-shadow: 0 0 10px 0 #000;
     background: $btn-color;
     padding: 12px;
     color: white;
+
+    @include tablette-responsive {
+        font-size: 18px;
+    }
 
     &:hover {
         box-shadow: $effet-shadow;

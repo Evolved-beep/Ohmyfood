@@ -1,8 +1,18 @@
+@import './breakpoint';
+@mixin tablette-responsive {
+    @media screen and (min-width:map-get($breakpoint,tablette)) {
+        @content;
+    }
+}
 .Logo {
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablette-responsive {
+        height: 70px;
+    }
 
     a {
         text-decoration: none;
@@ -11,11 +21,20 @@
 
     i {
         margin: 0 12px;
+
+        @include tablette-responsive {
+            font-size: 24px;
+            margin: 0 18px;
+        }
     }
 
     img {
         height: 24px;
         margin: 0 auto;
+
+        @include tablette-responsive {
+            height: 35px;
+        }
     }
 } 
 
