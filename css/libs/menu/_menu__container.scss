@@ -5,6 +5,12 @@
     }
 }
 
+@mixin desktop-responsive {
+    @media screen and (min-width:map-get($breakpoint,desktop)) {
+        @content;
+    }
+}
+
 .menu__container {
     margin: 12px 0;
 
@@ -21,18 +27,22 @@
             font-size: 24px;
             width: 8%;
         }
+
+        @include desktop-responsive{
+            width: 4%;
+        }
     }
 
     .AnimE {
-        animation: menu__anim 400ms ease-in;
+        animation: menu__anim 1.5s ease-in;
     }
 
     .AnimP {
-        animation: menu__anim 600ms ease-in;
+        animation: menu__anim 2s ease-in;
     }
 
     .AnimD {
-        animation: menu__anim 800ms ease-in;
+        animation: menu__anim 2.5s ease-in;
     }
 
     article {
@@ -136,15 +146,17 @@
             padding: 14px;
             font-size: 18px;
 
+            &:hover {
+                .btn__btn {
+                   box-shadow: 0 0 10px 0 #000;
+                }
+            }
+
             @include tablette-responsive {
                 font-size: 22px;
             }
         } 
-        &:hover {
-            .btn__btn {
-               box-shadow: 0 0 10px 0 #000;
-            }
-        }
+        
 
     }
 

@@ -301,9 +301,17 @@ body {
 
 #fonctionnement .fonctionnement__card div {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: 0;
   margin: 0 0 0 -8px;
-  text-align: center;
   color: white;
   font-size: 13px;
   height: 20px;
@@ -373,7 +381,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 12px 0;
+    margin: 0 auto;
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  #restaurant .restaurant__link {
+    width: 50%;
   }
 }
 
@@ -398,13 +413,13 @@ body {
     position: relative;
     height: 280px;
     max-width: 768px;
-    width: 65%;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 998px) {
   #restaurant .restaurant__link article {
-    width: 40%;
+    width: 100%;
   }
 }
 
@@ -426,7 +441,8 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  height: 20px;
+  height: 18px;
+  padding: 3px 5px;
   max-width: 60px;
   background: #99E2D0;
 }
@@ -618,19 +634,25 @@ body {
   }
 }
 
+@media screen and (min-width: 998px) {
+  .menu__container span {
+    width: 4%;
+  }
+}
+
 .menu__container .AnimE {
-  -webkit-animation: menu__anim 400ms ease-in;
-          animation: menu__anim 400ms ease-in;
+  -webkit-animation: menu__anim 1.5s ease-in;
+          animation: menu__anim 1.5s ease-in;
 }
 
 .menu__container .AnimP {
-  -webkit-animation: menu__anim 600ms ease-in;
-          animation: menu__anim 600ms ease-in;
+  -webkit-animation: menu__anim 2s ease-in;
+          animation: menu__anim 2s ease-in;
 }
 
 .menu__container .AnimD {
-  -webkit-animation: menu__anim 800ms ease-in;
-          animation: menu__anim 800ms ease-in;
+  -webkit-animation: menu__anim 2.5s ease-in;
+          animation: menu__anim 2.5s ease-in;
 }
 
 .menu__container article {
@@ -776,22 +798,25 @@ body {
   font-size: 18px;
 }
 
+.btn__btn__container .btn__btn:hover .btn__btn {
+  -webkit-box-shadow: 0 0 10px 0 #000;
+          box-shadow: 0 0 10px 0 #000;
+}
+
 @media screen and (min-width: 768px) {
   .btn__btn__container .btn__btn {
     font-size: 22px;
   }
 }
 
-.btn__btn__container:hover .btn__btn {
-  -webkit-box-shadow: 0 0 10px 0 #000;
-          box-shadow: 0 0 10px 0 #000;
-}
-
 @-webkit-keyframes menu__anim {
   0% {
-    -webkit-transform: translateY(1450px);
-            transform: translateY(1450px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     -webkit-transform: translateY(0);
@@ -802,9 +827,12 @@ body {
 
 @keyframes menu__anim {
   0% {
-    -webkit-transform: translateY(1450px);
-            transform: translateY(1450px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     -webkit-transform: translateY(0);
@@ -822,7 +850,6 @@ body {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    width: 20%;
   }
 }
 
@@ -835,7 +862,6 @@ body {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    width: 20%;
   }
 }
 
